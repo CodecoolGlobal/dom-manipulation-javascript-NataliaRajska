@@ -8,8 +8,16 @@ const moves = {
     '100': moveRight
 };
 
-function main() {
+function generateElements(count) {
+    const container = document.querySelector(".container");
+    for(let i=0; i<count;i++){
+        for(let j=0;j<count;j++){
+            let element = document.createElement("div");
+            element.className = "square";
+            container.appendChild(element);
+        }
+    }
     // event handlers and other code here
 }
 
-main();
+generateElements();
